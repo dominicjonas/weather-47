@@ -8,7 +8,6 @@ const WeatherSearch = () => {
     e.preventDefault()
 
     getCity(location)
-    console.log(location)
   }
 
   return (
