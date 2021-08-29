@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: #eee;
+}
+
+.title {
+  color: crimson;
+  margin-top: 1em;
+  font-size: 5em;
+  letter-spacing: -8px;
+  font-weight: 900;
+  span {
+    color: black;
+    font-size: 1.3em;
+    letter-spacing: -15px;
+  }
+  i {
+    color: black;
+    position: absolute;
+    z-index: -1;
+    font-size: 3em;
+    opacity: 30%;
+  }
+}
+
+input {
+  padding: 0.6em;
+  margin-top: 2em;
+}
