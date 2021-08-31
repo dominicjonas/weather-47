@@ -1,14 +1,23 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { getCity } from '../forecastAndCity'
 
 const WeatherSearch = () => {
-  const [location, setLocation] = useState('')
+  const [locationInput, setLocationInput] = useState('')
+  const [weatherInfo, setWeatherInfo] = useState({})
 
   const handleSubmit = (e) => {
     e.preventDefault()
 
-    getCity(location)
+    if (locationInput) {
+      setWeatherInfo(getCity(locationInput))
+      setLocationInput('')
+      console.log('this is the weather info obj', weatherInfo)
+    } else {
+      console.log('enter a city')
+    }
   }
+
+  useEffect(() => {}, [])
 
   return (
     <>
@@ -19,8 +28,8 @@ const WeatherSearch = () => {
           name='location'
           placeholder='Enter location'
           autoComplete='off'
-          value={location}
-          onChange={(e) => setLocation(e.target.value)}
+          value={locationInput}
+          onChange={(e) => setLocationInput(e.target.value)}
         />
       </form>
     </>
@@ -28,3 +37,14 @@ const WeatherSearch = () => {
 }
 
 export default WeatherSearch
+
+// TODO
+//? How to take the data gathered in the 'getWeather' function and store in an object
+//?   --> how to pass down the props needed from getWeaher function to WeatherSearch component
+//?
+
+// input is stored in the locationInput state
+// onSubmit fires the getCity fn with the locationInput passed in
+// getCity gathers the .Key for that location object and passes it to getWeather fn
+// this then makes another api call with the location.Key and return the weatherData object
+//* need to be able to use the weatherInfo state as an object to make dynamic UI updates.
