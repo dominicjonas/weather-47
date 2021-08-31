@@ -36,11 +36,11 @@ body {
 }
 
 .title i {
-  color: black;
+  color: #137586;
   position: absolute;
   z-index: -1;
   font-size: 3em;
-  opacity: 30%;
+  opacity: 25%;
 }
 
 input {

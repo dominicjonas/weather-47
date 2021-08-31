@@ -1,5 +1,5 @@
 import React from 'react'
-import './styles/app.scss'
+import './styles/app.css'
 
 import Header from './components/Header'
 import WeatherSearch from './components/WeatherSearch'

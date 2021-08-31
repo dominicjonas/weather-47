@@ -3,21 +3,18 @@ import { getCity } from '../forecastAndCity'
 
 const WeatherSearch = () => {
   const [locationInput, setLocationInput] = useState('')
+  const [locationQuery, setLocationQuery] = useState('')
   const [weatherInfo, setWeatherInfo] = useState({})
 
   const handleSubmit = (e) => {
     e.preventDefault()
-
-    if (locationInput) {
-      setWeatherInfo(getCity(locationInput))
-      setLocationInput('')
-      console.log('this is the weather info obj', weatherInfo)
-    } else {
-      console.log('enter a city')
-    }
+    setLocationQuery(locationInput)
   }
 
-  useEffect(() => {}, [])
+  useEffect(() => {
+    setWeatherInfo(getCity(locationQuery))
+    console.log(weatherInfo)
+  }, [locationQuery])
 
   return (
     <>

@@ -15,5 +15,10 @@ export const getCity = async (city) => {
 
   const res = await fetch(base + query)
   const data = await res.json()
+  console.log(data[0])
   getWeather(data[0].Key)
 }
+
+// TODO
+//? export getCity --> data[0]
+//? export getWeather --> data[0]
