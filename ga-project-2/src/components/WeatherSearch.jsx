@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { getCity } from '../forecastAndCity'
+import { getCity, getWeather } from '../forecastAndCity'
 
 const WeatherSearch = () => {
   const [locationInput, setLocationInput] = useState('')
@@ -12,8 +12,17 @@ const WeatherSearch = () => {
   }
 
   useEffect(() => {
-    setWeatherInfo(getCity(locationQuery))
-    console.log(weatherInfo)
+    if (!locationQuery) {
+      return
+    }
+    getCity(locationQuery)
+      .then((cityInfo) => {
+        return getWeather(cityInfo.Key)
+      })
+      .then((weather) => {
+        setWeatherInfo(weather)
+        console.log(weather)
+      })
   }, [locationQuery])
 
   return (
@@ -29,6 +38,7 @@ const WeatherSearch = () => {
           onChange={(e) => setLocationInput(e.target.value)}
         />
       </form>
+      <p>{JSON.stringify(weatherInfo)}</p>
     </>
   )
 }
