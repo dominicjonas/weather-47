@@ -1,5 +1,11 @@
 import React, { useState, useEffect } from 'react'
-import { getCity, getWeather } from '../forecastAndCity'
+import { getCity, getWeather } from '../../forecastAndCity'
+import DateField from '../fields/DateField.jsx'
+import NameField from '../fields/NameField'
+import TimeField from '../fields/TimeField'
+import WeatherConditionField from '../fields/WeatherConditionField'
+import WeatherIconField from '../fields/WeatherIconField'
+import TemperatureField from '../fields/TemperatureField'
 
 const WeatherSearch = () => {
   const [locationInput, setLocationInput] = useState('')
@@ -47,13 +53,13 @@ const WeatherSearch = () => {
       {weatherInfo && (
         <div className='weather-container'>
           <>
-            <p>{cityInfo.LocalizedName}</p>
-            <p>weather condition : {weatherInfo.WeatherText}</p>
-            <p>time : {weatherInfo.EpochTime}</p>
-            <p>date : {weatherInfo.LocalObservationDateTime}</p>
+            <TemperatureField temperature={weatherInfo.Temperature.Metric.Value} />
+            <NameField name={cityInfo.LocalizedName} />
+            <WeatherConditionField weatherCondition={weatherInfo.WeatherText} />
+            <TimeField time={weatherInfo.EpochTime} />
+            <DateField date={weatherInfo.LocalObservationDateTime} />
             {weatherInfo.IsDayTime && <div>it is day time</div>}
-            <p>weather icon : {weatherInfo.WeatherIcon}</p>
-            <p>{weatherInfo.Temperature.Metric.Value}°</p>
+            <WeatherIconField weatherIcon={weatherInfo.WeatherIcon} />
           </>
         </div>
       )}
