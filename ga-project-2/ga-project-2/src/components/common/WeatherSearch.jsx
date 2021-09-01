@@ -18,6 +18,8 @@ const WeatherSearch = () => {
     setLocationQuery(locationInput)
   }
 
+  //revise this
+
   useEffect(() => {
     if (!locationQuery) {
       return
@@ -54,10 +56,10 @@ const WeatherSearch = () => {
             <TemperatureField temperature={weatherInfo.Temperature.Metric.Value} />
             <NameField name={cityInfo.LocalizedName} />
             <WeatherConditionField weatherCondition={weatherInfo.WeatherText} />
-            <WeatherIconField weatherIcon={weatherInfo.WeatherIcon} />
             <TimeField time={weatherInfo.EpochTime} />
             <DateField date={weatherInfo.LocalObservationDateTime} />
             {weatherInfo.IsDayTime && <div>it is day time</div>}
+            <WeatherIconField weatherIcon={weatherInfo.WeatherIcon} />
           </>
         </div>
       )}
@@ -93,6 +95,4 @@ export default WeatherSearch
 // that key is fed into the getWeather function as an id , which return the weather data
 // all this is run inside the useEffect which fires when the locationQuery state is populated
 
-// TODO ideas
-//? import from flag api depending on country --> cityInfo
-//? katagana styling ?
+//test

@@ -42,3 +42,19 @@ input {
   outline: none;
   border-radius: 0.4em;
 }
+
+//* Weather Card UI
+
+.weather-container {
+  margin-top: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2em 1em;
+  border: 1px solid blue;
+  p {
+    margin: 1em;
+    border: 1px solid crimson;
+    padding: 0.5em;
+  }
+}
