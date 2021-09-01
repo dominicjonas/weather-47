@@ -2,7 +2,7 @@ import React from 'react'
 
 const WeatherConditionField = ({ weatherCondition }) => {
   return (
-    <div>
+    <div className='weather-condition-display'>
       <p>{weatherCondition}</p>
     </div>
   )

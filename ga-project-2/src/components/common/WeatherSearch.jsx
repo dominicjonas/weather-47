@@ -52,11 +52,14 @@ const WeatherSearch = () => {
         <div className='weather-container'>
           <>
             <TemperatureField temperature={weatherInfo.Temperature.Metric.Value} />
-            <NameField name={cityInfo.LocalizedName} />
+            <NameField
+              cityName={cityInfo.LocalizedName}
+              countryName={cityInfo.Country.EnglishName}
+            />
             <WeatherConditionField weatherCondition={weatherInfo.WeatherText} />
-            <TimeField time={weatherInfo.EpochTime} />
+            <TimeField GMTOffset={cityInfo.TimeZone.GmtOffset} />
             <DateField date={weatherInfo.LocalObservationDateTime} />
-            {weatherInfo.IsDayTime && <div>it is day time</div>}
+            {weatherInfo.IsDayTime ? <div>day time</div> : <div>night time</div>}
             <WeatherIconField weatherIcon={weatherInfo.WeatherIcon} />
           </>
         </div>

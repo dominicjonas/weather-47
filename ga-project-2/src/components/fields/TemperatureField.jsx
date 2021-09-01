@@ -4,7 +4,7 @@ const TemperatureField = ({ temperature }) => {
   return (
     <div className='temp-display'>
       <p>
-        {temperature} <span>°</span>
+        {temperature} <span>°C</span>
       </p>
     </div>
   )

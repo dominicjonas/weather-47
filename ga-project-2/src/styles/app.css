@@ -18,7 +18,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  background: white;
+  background: #3ed3cb;
 }
 
 .title {
@@ -30,24 +30,24 @@ body {
 }
 
 .title span {
-  color: black;
+  color: #1b1b1b;
   font-size: 1.3em;
   letter-spacing: -15px;
 }
 
 .title i {
-  color: #137586;
+  color: white;
   position: absolute;
   z-index: -1;
   font-size: 3em;
-  opacity: 25%;
+  opacity: 45%;
 }
 
 input {
   padding: 0.6em;
   margin-top: 2em;
   font-size: 1em;
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.8);
   color: black;
   outline: none;
   border-radius: 0.4em;
@@ -66,7 +66,11 @@ input {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  border: 5px solid lightblue;
+  border: 2px solid #fdfdfd;
+  border-radius: 0.3em;
+  -webkit-box-shadow: -4px 4px 35px 0px rgba(0, 0, 0, 0.5);
+          box-shadow: -4px 4px 35px 0px rgba(0, 0, 0, 0.5);
+  color: azure;
 }
 
 .weather-container p {
@@ -75,17 +79,28 @@ input {
 }
 
 .weather-container .temp-display {
-  background: #d9e2e1;
+  background: #39c9b8;
   font-size: 4em;
   font-weight: 700;
+  color: aliceblue;
 }
 
 .weather-container .temp-display span {
-  color: crimson;
+  color: white;
 }
 
 .weather-container .city-name-display {
-  font-size: 1.4em;
-  font-weight: 500;
+  font-size: 1.9em;
+  font-weight: 600;
+}
+
+.weather-container .weather-condition-display {
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+.weather-container .local-time-display {
+  font-size: 1.3em;
+  font-weight: 600;
 }
 /*# sourceMappingURL=app.css.map */

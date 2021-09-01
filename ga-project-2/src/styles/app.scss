@@ -10,7 +10,7 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  background: white;
+  background: rgb(62, 211, 203);
 }
 
 .title {
@@ -20,16 +20,16 @@ body {
   letter-spacing: -8px;
   font-weight: 900;
   span {
-    color: black;
+    color: rgb(27, 27, 27);
     font-size: 1.3em;
     letter-spacing: -15px;
   }
   i {
-    color: rgb(19, 117, 134);
+    color: rgb(255, 255, 255);
     position: absolute;
     z-index: -1;
     font-size: 3em;
-    opacity: 25%;
+    opacity: 45%;
   }
 }
 
@@ -37,7 +37,7 @@ input {
   padding: 0.6em;
   margin-top: 2em;
   font-size: 1em;
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.8);
   color: black;
   outline: none;
   border-radius: 0.4em;
@@ -51,21 +51,33 @@ input {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border: 5px solid lightblue;
+  border: 2px solid rgb(253, 253, 253);
+  border-radius: 0.3em;
+  box-shadow: -4px 4px 35px 0px rgba(0, 0, 0, 0.5);
+  color: azure;
   p {
     padding: 0.1em;
     margin: 0.5em;
   }
   .temp-display {
-    background: rgb(217, 226, 225);
+    background: rgb(57, 201, 184);
     font-size: 4em;
     font-weight: 700;
+    color: aliceblue;
     span {
-      color: crimson;
+      color: rgb(255, 255, 255);
     }
   }
   .city-name-display {
-    font-size: 1.4em;
-    font-weight: 500;
+    font-size: 1.9em;
+    font-weight: 600;
+  }
+  .weather-condition-display {
+    font-size: 1.5em;
+    font-weight: 600;
+  }
+  .local-time-display {
+    font-size: 1.3em;
+    font-weight: 600;
   }
 }
