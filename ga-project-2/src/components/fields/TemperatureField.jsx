@@ -2,8 +2,10 @@ import React from 'react'
 
 const TemperatureField = ({ temperature }) => {
   return (
-    <div>
-      <p>{temperature}°</p>
+    <div className='temp-display'>
+      <p>
+        {temperature} <span>°</span>
+      </p>
     </div>
   )
 }

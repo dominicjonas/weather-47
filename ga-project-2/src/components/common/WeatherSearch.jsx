@@ -18,8 +18,6 @@ const WeatherSearch = () => {
     setLocationQuery(locationInput)
   }
 
-  //revise this
-
   useEffect(() => {
     if (!locationQuery) {
       return
@@ -56,10 +54,10 @@ const WeatherSearch = () => {
             <TemperatureField temperature={weatherInfo.Temperature.Metric.Value} />
             <NameField name={cityInfo.LocalizedName} />
             <WeatherConditionField weatherCondition={weatherInfo.WeatherText} />
+            <WeatherIconField weatherIcon={weatherInfo.WeatherIcon} />
             <TimeField time={weatherInfo.EpochTime} />
             <DateField date={weatherInfo.LocalObservationDateTime} />
             {weatherInfo.IsDayTime && <div>it is day time</div>}
-            <WeatherIconField weatherIcon={weatherInfo.WeatherIcon} />
           </>
         </div>
       )}

@@ -2,7 +2,7 @@ import React from 'react'
 
 const NameField = ({ name }) => {
   return (
-    <div>
+    <div className='city-name-display'>
       <p>{name}</p>
     </div>
   )

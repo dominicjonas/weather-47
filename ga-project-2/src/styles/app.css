@@ -54,6 +54,7 @@ input {
 }
 
 .weather-container {
+  position: relative;
   margin-top: 2em;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -65,13 +66,26 @@ input {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 2em 1em;
-  border: 1px solid blue;
+  border: 5px solid lightblue;
 }
 
 .weather-container p {
-  margin: 1em;
-  border: 1px solid crimson;
-  padding: 0.5em;
+  padding: 0.1em;
+  margin: 0.5em;
+}
+
+.weather-container .temp-display {
+  background: #d9e2e1;
+  font-size: 4em;
+  font-weight: 700;
+}
+
+.weather-container .temp-display span {
+  color: crimson;
+}
+
+.weather-container .city-name-display {
+  font-size: 1.4em;
+  font-weight: 500;
 }
 /*# sourceMappingURL=app.css.map */
