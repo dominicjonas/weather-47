@@ -3,12 +3,15 @@ import { useState, useEffect } from 'react'
 const TimeField = ({ GMTOffset }) => {
   const [hours, setHours] = useState(0)
   const [minutes, setMinutes] = useState(0)
+  const [gmtOffset, setGmtOffset] = useState(0)
 
   // const [overtime, setOvertime] = useState(0)
 
   useEffect(() => {
     let now = new Date()
+    setGmtOffset(GMTOffset)
     setMinutes(now.getMinutes())
+    setHours(now.getHours() + gmtOffset - 1)
     // if (minutes > 30) {
     //   setMinutes(30)
     // }
@@ -18,14 +21,13 @@ const TimeField = ({ GMTOffset }) => {
     // if (hours + GMTOffset - 1 > 24) {
     //   setOvertime(Math.abs(now.getHours() + GMTOffset - 1))
     // } else {
-    setHours(now.getHours() + GMTOffset - 1)
     // }
-  }, [hours])
+  }, [GMTOffset, gmtOffset])
 
   return (
     <div className='local-time-display'>
       <p>
-        local time since update {hours}:{minutes}
+        local time {hours}:{minutes}
       </p>
     </div>
   )

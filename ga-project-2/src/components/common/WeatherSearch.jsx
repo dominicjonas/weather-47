@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import { getCity, getWeather } from '../../forecastAndCity'
+import { getCity, getWeather } from '../../lib/accuWeatherApi'
+import { getPhotos } from '../../lib/pexelsApi'
 import DateField from '../fields/DateField.jsx'
 import NameField from '../fields/NameField'
 import TimeField from '../fields/TimeField'
@@ -12,6 +13,7 @@ const WeatherSearch = () => {
   const [locationQuery, setLocationQuery] = useState('')
   const [weatherInfo, setWeatherInfo] = useState(null)
   const [cityInfo, setCityInfo] = useState(null)
+  const [photoUrl, setPhotoUrl] = useState(null)
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -34,6 +36,13 @@ const WeatherSearch = () => {
         console.log({ weather })
       })
   }, [locationQuery])
+
+  useEffect(() => {
+    getPhotos('dog').then((photoInfo) => {
+      const imgSrc = `'${photoInfo}'`
+      setPhotoUrl(imgSrc)
+    })
+  }, [])
 
   return (
     <>
@@ -59,11 +68,18 @@ const WeatherSearch = () => {
             <WeatherConditionField weatherCondition={weatherInfo.WeatherText} />
             <TimeField GMTOffset={cityInfo.TimeZone.GmtOffset} />
             <DateField date={weatherInfo.LocalObservationDateTime} />
-            {weatherInfo.IsDayTime ? <div>day time</div> : <div>night time</div>}
+            {weatherInfo.IsDayTime ? (
+              <div>isDayTime : true</div>
+            ) : (
+              <div>isDayTime: false</div>
+            )}
             <WeatherIconField weatherIcon={weatherInfo.WeatherIcon} />
           </>
         </div>
       )}
+      <div>
+        <img src={photoUrl} alt='' />
+      </div>
     </>
   )
 }
