@@ -26,23 +26,25 @@ const WeatherSearch = () => {
     }
     getCity(locationQuery)
       .then((cityInfo) => {
-        setCityInfo(cityInfo)
-        console.log({ cityInfo })
-        return getWeather(cityInfo.Key)
+        if (cityInfo) {
+          setCityInfo(cityInfo)
+          console.log({ cityInfo })
+          return getWeather(cityInfo.Key)
+        }
+        return cityInfo
       })
       .then((weather) => {
         setWeatherInfo(weather)
         setLocationInput('')
-        console.log({ weather })
       })
   }, [locationQuery])
 
   useEffect(() => {
-    getPhotos('dog').then((photoInfo) => {
-      const imgSrc = `'${photoInfo}'`
+    getPhotos(locationQuery).then((photoInfo) => {
+      const imgSrc = photoInfo
       setPhotoUrl(imgSrc)
     })
-  }, [])
+  }, [locationQuery])
 
   return (
     <>
@@ -57,16 +59,16 @@ const WeatherSearch = () => {
           onChange={(e) => setLocationInput(e.target.value)}
         />
       </form>
-      {weatherInfo && (
+      {weatherInfo && cityInfo && (
         <div className='weather-container'>
           <>
             <TemperatureField temperature={weatherInfo.Temperature.Metric.Value} />
             <NameField
-              cityName={cityInfo.LocalizedName}
+              cityName={cityInfo.LocalizedName ? cityInfo.LocalizedName : locationQuery}
               countryName={cityInfo.Country.EnglishName}
             />
             <WeatherConditionField weatherCondition={weatherInfo.WeatherText} />
-            <TimeField GMTOffset={cityInfo.TimeZone.GmtOffset} />
+            <TimeField GMTOffset={cityInfo.TimeZone.GmtOffset} cityName={locationQuery} />
             <DateField date={weatherInfo.LocalObservationDateTime} />
             {weatherInfo.IsDayTime ? (
               <div>isDayTime : true</div>

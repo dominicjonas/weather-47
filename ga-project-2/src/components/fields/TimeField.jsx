@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 
-const TimeField = ({ GMTOffset }) => {
+const TimeField = ({ GMTOffset, cityName }) => {
   const [hours, setHours] = useState(0)
   const [minutes, setMinutes] = useState(0)
   const [gmtOffset, setGmtOffset] = useState(0)
@@ -22,7 +22,7 @@ const TimeField = ({ GMTOffset }) => {
     //   setOvertime(Math.abs(now.getHours() + GMTOffset - 1))
     // } else {
     // }
-  }, [GMTOffset, gmtOffset])
+  }, [GMTOffset, gmtOffset, cityName])
 
   return (
     <div className='local-time-display'>
