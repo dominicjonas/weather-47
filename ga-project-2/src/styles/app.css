@@ -24,7 +24,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: white;
+  background: #f6fcfc;
   overflow: hidden;
 }
 
@@ -65,8 +65,6 @@ body .form input {
   outline: none;
   background: transparent;
   font-size: 1.8em;
-  font-weight: 700;
-  color: #111;
 }
 
 body .form input:focus + .label-name .content-name {
@@ -118,8 +116,8 @@ body .form .content-name {
 }
 
 .weather-container {
-  -webkit-transition: 0.3s ease all;
-  transition: 0.3s ease all;
+  width: 400px;
+  height: 650px;
   position: relative;
   margin-bottom: 0em;
   display: -webkit-box;
@@ -132,12 +130,14 @@ body .form .content-name {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  border: 1px solid #fdfdfd;
-  border-bottom-left-radius: 0.3em;
-  border-bottom-right-radius: 0.3em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 2px solid #fdfdfd;
+  border-radius: 3px;
   -webkit-box-shadow: -4px 4px 35px 5px rgba(0, 0, 0, 0.6);
           box-shadow: -4px 4px 35px 5px rgba(0, 0, 0, 0.6);
-  color: azure;
+  color: white;
 }
 
 .weather-container p {
@@ -157,17 +157,17 @@ body .form .content-name {
 }
 
 .weather-container .city-name-display {
-  font-size: 1.9em;
+  font-size: 1.8em;
   font-weight: 600;
 }
 
 .weather-container .weather-condition-display {
-  font-size: 1.5em;
+  font-size: 1.6em;
   font-weight: 600;
 }
 
 .weather-container .local-time-display {
-  font-size: 1.3em;
+  font-size: 1.4em;
   font-weight: 600;
 }
 
@@ -176,17 +176,23 @@ body .form .content-name {
   font-size: 3.5em;
 }
 
+.weather-container .hr {
+  border: 1px solid aliceblue;
+  border-radius: 3px;
+  width: 70%;
+}
+
 .night-container {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(100, 73, 73, 0.5)), to(rgba(255, 255, 255, 0.5))), url(../assets/images/nightsky.jpg);
-  background: linear-gradient(rgba(100, 73, 73, 0.5), rgba(255, 255, 255, 0.5)), url(../assets/images/nightsky.jpg);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(100, 73, 73, 0.5)), to(rgba(255, 255, 255, 0.5))), url(../assets/images/nightsky.jpeg);
+  background: linear-gradient(rgba(100, 73, 73, 0.5), rgba(255, 255, 255, 0.5)), url(../assets/images/nightsky.jpeg);
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .day-container {
   background: lightblue;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(100, 73, 73, 0.5)), to(rgba(255, 255, 255, 0.1))), url(../assets/images/daysky.jpg);
-  background: linear-gradient(rgba(100, 73, 73, 0.5), rgba(255, 255, 255, 0.1)), url(../assets/images/daysky.jpg);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(100, 73, 73, 0.5)), to(rgba(255, 255, 255, 0.1))), url(../assets/images/daysky.jpeg);
+  background: linear-gradient(rgba(100, 73, 73, 0.5), rgba(255, 255, 255, 0.1)), url(../assets/images/daysky.jpeg);
   background-size: cover;
   background-repeat: no-repeat;
 }

@@ -18,7 +18,7 @@ body {
   flex-direction: column;
   align-items: center;
 
-  background: rgb(255, 255, 255);
+  background: rgb(246, 252, 252);
   overflow: hidden;
 
   .title {
@@ -42,20 +42,6 @@ body {
     }
   }
 
-  input {
-    // padding: 0.8em 0.7em;
-    // margin-top: 2em;
-    // font-size: 1em;
-    // background: transparent;
-    // border-bottom: 2px solid limegreen;
-    // border-top: none;
-    // border-left: none;
-    // border-right: none;
-    // border-radius: 2px;
-    // width: 100%;
-    // outline: none;
-  }
-
   .form {
     position: relative;
     height: 70px;
@@ -69,8 +55,6 @@ body {
       outline: none;
       background: transparent;
       font-size: 1.8em;
-      font-weight: 700;
-      color: #111;
       &:focus + .label-name .content-name {
         transform: translateY(-160%);
         font-size: 1em;
@@ -115,23 +99,23 @@ body {
 //* Weather Card UI
 
 .weather-container {
-  transition: 0.3s ease all;
+  width: 400px;
+  height: 650px;
   position: relative;
   margin-bottom: 0em;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border: 1px solid rgb(253, 253, 253);
-  border-bottom-left-radius: 0.3em;
-  border-bottom-right-radius: 0.3em;
+  align-items: center;
+  border: 2px solid rgb(253, 253, 253);
+  border-radius: 3px;
   box-shadow: -4px 4px 35px 5px rgba(0, 0, 0, 0.6);
-  color: azure;
+  color: white;
   p {
     padding: 0.1em;
     margin: 0.5em;
   }
   .temp-display {
-    // background: rgba(48, 175, 160, 0.486);
     background: transparent;
     font-size: 4em;
     font-weight: 700;
@@ -141,26 +125,31 @@ body {
     }
   }
   .city-name-display {
-    font-size: 1.9em;
+    font-size: 1.8em;
     font-weight: 600;
   }
   .weather-condition-display {
-    font-size: 1.5em;
+    font-size: 1.6em;
     font-weight: 600;
   }
   .local-time-display {
-    font-size: 1.3em;
+    font-size: 1.4em;
     font-weight: 600;
   }
   .weather-icon img {
     height: 5em;
     font-size: 3.5em;
   }
+  .hr {
+    border: 1px solid aliceblue;
+    border-radius: 3px;
+    width: 70%;
+  }
 }
 
 .night-container {
   background: linear-gradient(rgba(100, 73, 73, 0.5), rgba(255, 255, 255, 0.5)),
-    url(../assets/images/nightsky.jpg);
+    url(../assets/images/nightsky.jpeg);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -168,12 +157,12 @@ body {
 .day-container {
   background: lightblue;
   background: linear-gradient(rgba(100, 73, 73, 0.5), rgba(255, 255, 255, 0.1)),
-    url(../assets/images/daysky.jpg);
+    url(../assets/images/daysky.jpeg);
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-// pexels api
+//* pexels api
 
 .pexels-img img {
   position: absolute;
@@ -185,7 +174,7 @@ body {
   opacity: 45%;
 }
 
-//  footer
+//* footer
 
 footer {
   position: absolute;

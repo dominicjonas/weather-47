@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { getCity, getWeather } from '../../lib/accuWeatherApi'
 import { getPhotos } from '../../lib/pexelsApi'
-import DateField from '../fields/DateField.jsx'
 import NameField from '../fields/NameField'
 import TimeField from '../fields/TimeField'
 import WeatherConditionField from '../fields/WeatherConditionField'
@@ -72,18 +71,20 @@ const WeatherSearch = () => {
         >
           <>
             <TemperatureField temperature={weatherInfo.Temperature.Metric.Value} />
+            <hr className='hr' />
             <WeatherIconField weatherIcon={weatherInfo.WeatherIcon} />
             <NameField
               cityName={cityInfo.LocalizedName ? cityInfo.LocalizedName : locationQuery}
               countryName={cityInfo.Country.EnglishName}
             />
+            <hr className='hr' />
             <WeatherConditionField weatherCondition={weatherInfo.WeatherText} />
+            <hr className='hr' />
             <TimeField
               GMTOffset={cityInfo.TimeZone.GmtOffset}
               cityName={locationQuery}
               epochTime={weatherInfo.EpochTime}
             />
-            <DateField date={weatherInfo.LocalObservationDateTime} />
           </>
         </div>
       )}
