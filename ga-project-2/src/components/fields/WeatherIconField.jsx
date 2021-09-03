@@ -86,7 +86,7 @@ const iconLookup = {
 const WeatherIconField = ({ weatherIcon }) => {
   return (
     <div className='weather-icon'>
-      <img src={iconLookup[weatherIcon]} alt={weatherIcon} className='icon' />
+      <img src={iconLookup[weatherIcon]} alt={weatherIcon} className='weather-icon' />
     </div>
   )
 }

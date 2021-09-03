@@ -1,13 +1,13 @@
-import { useState, useEffect, useCallback } from 'react'
+import { useState, useEffect } from 'react'
 
-const TimeField = ({ GMTOffset, cityName }) => {
+const TimeField = ({ GMTOffset, cityName, epochTime }) => {
   const [hours, setHours] = useState(0)
   const [minutes, setMinutes] = useState(0)
   const [gmtOffset, setGmtOffset] = useState(0)
 
-  const localTime = useCallback(() => {
-    // pass time zone code from weatherSearch .. -> moment.js
-  }, [GMTOffset])
+  // const localTime = useCallback(() => {
+  //   // pass time zone code from weatherSearch .. -> moment.js
+  // }, [GMTOffset])
 
   // const [overtime, setOvertime] = useState(0)
 
@@ -16,17 +16,6 @@ const TimeField = ({ GMTOffset, cityName }) => {
     setGmtOffset(GMTOffset)
     setMinutes(now.getMinutes())
     setHours(now.getHours() + gmtOffset - 1)
-    // if (minutes > 30) {
-    //   setMinutes(30)
-    // }
-    // if (minutes < 30) {
-    //   setMinutes('00')
-    // }
-    // find if pos
-    // if (hours + GMTOffset - 1 > 24) {
-    //   setOvertime(Math.abs(now.getHours() + GMTOffset - 1))
-    // } else {
-    // }
   }, [GMTOffset, gmtOffset, cityName])
 
   return (

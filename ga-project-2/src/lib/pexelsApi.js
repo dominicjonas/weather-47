@@ -7,6 +7,6 @@ export const getPhotos = async (search) => {
   return search
     ? client.photos
         .search({ query, per_page: 1 })
-        .then((data) => data.photos[0].src.medium)
+        .then((data) => data.photos[0].src.original)
     : null
 }

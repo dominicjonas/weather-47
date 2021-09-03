@@ -54,7 +54,7 @@ const WeatherSearch = () => {
           type='text'
           id='location'
           name='location'
-          placeholder='Enter location'
+          placeholder='Enter a city'
           autoComplete='off'
           value={locationInput}
           onChange={(e) => setLocationInput(e.target.value)}
@@ -75,7 +75,11 @@ const WeatherSearch = () => {
               countryName={cityInfo.Country.EnglishName}
             />
             <WeatherConditionField weatherCondition={weatherInfo.WeatherText} />
-            <TimeField GMTOffset={cityInfo.TimeZone.GmtOffset} cityName={locationQuery} />
+            <TimeField
+              GMTOffset={cityInfo.TimeZone.GmtOffset}
+              cityName={locationQuery}
+              epochTime={weatherInfo.EpochTime}
+            />
             <DateField date={weatherInfo.LocalObservationDateTime} />
             <WeatherIconField weatherIcon={weatherInfo.WeatherIcon} />
           </>

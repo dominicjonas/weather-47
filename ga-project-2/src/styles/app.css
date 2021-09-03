@@ -19,6 +19,7 @@ body {
           align-items: center;
   text-align: center;
   background: #3ed3cb;
+  overflow: hidden;
 }
 
 .title {
@@ -44,18 +45,21 @@ body {
 }
 
 input {
-  padding: 0.6em;
+  padding: 0.8em 0.5em;
   margin-top: 2em;
   font-size: 1em;
   background: rgba(255, 255, 255, 0.8);
   color: black;
   outline: none;
-  border-radius: 0.4em;
+  border-top-left-radius: 0.3em;
+  border-top-right-radius: 0.3em;
+  width: 100%;
+  border: none;
 }
 
 .weather-container {
   position: relative;
-  margin-top: 2em;
+  margin-bottom: 0em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -66,8 +70,10 @@ input {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  border: 2px solid #fdfdfd;
-  border-radius: 0.3em;
+  border: 1px solid #fdfdfd;
+  border-top: transparent;
+  border-bottom-left-radius: 0.3em;
+  border-bottom-right-radius: 0.3em;
   -webkit-box-shadow: -4px 4px 35px 0px rgba(0, 0, 0, 0.5);
           box-shadow: -4px 4px 35px 0px rgba(0, 0, 0, 0.5);
   color: azure;
@@ -79,7 +85,7 @@ input {
 }
 
 .weather-container .temp-display {
-  background: #39c9b8;
+  background: transparent;
   font-size: 4em;
   font-weight: 700;
   color: aliceblue;
@@ -105,15 +111,8 @@ input {
 }
 
 .weather-container .weather-icon img {
-  fill: white;
-  font-size: 4em;
-  height: 4em;
-  color: white;
-  fill: white;
-}
-
-.pexels-img {
-  border: 4px solid black;
+  height: 5em;
+  font-size: 3.5em;
 }
 
 .night-container {
@@ -129,5 +128,15 @@ input {
   background: linear-gradient(rgba(100, 73, 73, 0.5), rgba(255, 255, 255, 0.1)), url(../assets/images/daysky.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.pexels-img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -20;
+  width: 100%;
+  height: 100%;
+  opacity: 45%;
 }
 /*# sourceMappingURL=app.css.map */
