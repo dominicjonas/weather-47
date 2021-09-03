@@ -54,11 +54,13 @@ const WeatherSearch = () => {
           type='text'
           id='location'
           name='location'
-          placeholder='Enter a city'
           autoComplete='off'
           value={locationInput}
           onChange={(e) => setLocationInput(e.target.value)}
         />
+        <label htmlFor='location' className='label-name'>
+          <span className='content-name'>Enter a city</span>
+        </label>
       </form>
       {weatherInfo && cityInfo && (
         <div

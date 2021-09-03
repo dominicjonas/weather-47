@@ -17,41 +17,99 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
-  background: var(--light-theme-bg);
+
+  background: rgb(255, 255, 255);
   overflow: hidden;
+
+  .title {
+    color: crimson;
+    margin-top: 1em;
+    font-size: 5em;
+    letter-spacing: -8px;
+    font-weight: 900;
+
+    span {
+      color: var(--light-theme-span);
+      font-size: 1.3em;
+      letter-spacing: -15px;
+    }
+    i {
+      color: rgb(46, 129, 125);
+      position: absolute;
+      z-index: -1;
+      font-size: 3em;
+      opacity: 45%;
+    }
+  }
+
+  input {
+    // padding: 0.8em 0.7em;
+    // margin-top: 2em;
+    // font-size: 1em;
+    // background: transparent;
+    // border-bottom: 2px solid limegreen;
+    // border-top: none;
+    // border-left: none;
+    // border-right: none;
+    // border-radius: 2px;
+    // width: 100%;
+    // outline: none;
+  }
+
+  .form {
+    position: relative;
+    height: 70px;
+    overflow: hidden;
+    background: transparent;
+    input {
+      width: 100%;
+      height: 100%;
+      padding: 0.5em 0 0;
+      border: none;
+      outline: none;
+      background: transparent;
+      font-size: 1.8em;
+      font-weight: 700;
+      color: #111;
+      &:focus + .label-name .content-name {
+        transform: translateY(-160%);
+        font-size: 1em;
+      }
+    }
+    label {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      border-bottom: 1px solid black;
+      font-weight: 600;
+      font-size: 1.3em;
+      color: #222;
+      &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-bottom: 3px solid rgb(128, 168, 167);
+        left: 0;
+        bottom: -2px;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+      }
+    }
+    .content-name {
+      position: absolute;
+      bottom: 5px;
+      left: 0;
+      transition: all 0.3s ease;
+    }
+  }
 }
 
-.title {
-  color: crimson;
-  margin-top: 1em;
-  font-size: 5em;
-  letter-spacing: -8px;
-  font-weight: 900;
-  span {
-    color: var(--light-theme-span);
-    font-size: 1.3em;
-    letter-spacing: -15px;
-  }
-  i {
-    color: rgb(46, 129, 125);
-    position: absolute;
-    z-index: -1;
-    font-size: 3em;
-    opacity: 45%;
-  }
-}
-
-input {
-  padding: 0.8em 0.7em;
-  margin-top: 2em;
-  font-size: 1em;
-  background: rgba(255, 255, 255, 0.8);
-  border-top-left-radius: 0.3em;
-  border-top-right-radius: 0.3em;
-  width: 100%;
-  border: none;
-  outline: none;
+.form input:focus + .label-name::after {
+  transform: translateX(0%);
 }
 
 //* Weather Card UI
@@ -64,7 +122,6 @@ input {
   flex-direction: column;
   justify-content: space-between;
   border: 1px solid rgb(253, 253, 253);
-  border-top: transparent;
   border-bottom-left-radius: 0.3em;
   border-bottom-right-radius: 0.3em;
   box-shadow: -4px 4px 35px 5px rgba(0, 0, 0, 0.6);
@@ -146,7 +203,7 @@ footer {
   p {
     margin: 1.5em 0.3em;
     font-weight: 600;
-    color: crimson;
+    color: #222;
   }
   span {
     font-weight: 700;
