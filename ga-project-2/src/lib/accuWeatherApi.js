@@ -1,4 +1,4 @@
-const key = 'tJH7FVUVin61PVLGlY2EXy3XHwRXuzGh'
+const key = 'OHVB1LsxAj5At4dR1weR3s0LdgVmAyPB'
 
 export const getWeather = async (id) => {
   const base = 'http://dataservice.accuweather.com/currentconditions/v1/'
@@ -20,5 +20,3 @@ export const getCity = async (city) => {
 
   return data[0]
 }
-
-// moment.js

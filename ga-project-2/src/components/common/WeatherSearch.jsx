@@ -70,6 +70,7 @@ const WeatherSearch = () => {
         >
           <>
             <TemperatureField temperature={weatherInfo.Temperature.Metric.Value} />
+            <WeatherIconField weatherIcon={weatherInfo.WeatherIcon} />
             <NameField
               cityName={cityInfo.LocalizedName ? cityInfo.LocalizedName : locationQuery}
               countryName={cityInfo.Country.EnglishName}
@@ -81,7 +82,6 @@ const WeatherSearch = () => {
               epochTime={weatherInfo.EpochTime}
             />
             <DateField date={weatherInfo.LocalObservationDateTime} />
-            <WeatherIconField weatherIcon={weatherInfo.WeatherIcon} />
           </>
         </div>
       )}

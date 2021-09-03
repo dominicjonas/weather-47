@@ -1,3 +1,10 @@
+:root {
+  --dark-theme-bg: rgb(9, 9, 44);
+  --dark-theme-span: rgb(238, 224, 224);
+  --light-theme-bg: rgb(130, 230, 221);
+  --light-theme-span: rgb(10, 8, 41);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -18,7 +25,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  background: #3ed3cb;
+  background: var(--light-theme-bg);
   overflow: hidden;
 }
 
@@ -31,13 +38,13 @@ body {
 }
 
 .title span {
-  color: #1b1b1b;
+  color: var(--light-theme-span);
   font-size: 1.3em;
   letter-spacing: -15px;
 }
 
 .title i {
-  color: white;
+  color: #2e817d;
   position: absolute;
   z-index: -1;
   font-size: 3em;
@@ -45,19 +52,20 @@ body {
 }
 
 input {
-  padding: 0.8em 0.5em;
+  padding: 0.8em 0.7em;
   margin-top: 2em;
   font-size: 1em;
   background: rgba(255, 255, 255, 0.8);
-  color: black;
-  outline: none;
   border-top-left-radius: 0.3em;
   border-top-right-radius: 0.3em;
   width: 100%;
   border: none;
+  outline: none;
 }
 
 .weather-container {
+  -webkit-transition: 0.3s ease all;
+  transition: 0.3s ease all;
   position: relative;
   margin-bottom: 0em;
   display: -webkit-box;
@@ -74,8 +82,8 @@ input {
   border-top: transparent;
   border-bottom-left-radius: 0.3em;
   border-bottom-right-radius: 0.3em;
-  -webkit-box-shadow: -4px 4px 35px 0px rgba(0, 0, 0, 0.5);
-          box-shadow: -4px 4px 35px 0px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: -4px 4px 35px 5px rgba(0, 0, 0, 0.6);
+          box-shadow: -4px 4px 35px 5px rgba(0, 0, 0, 0.6);
   color: azure;
 }
 
@@ -134,9 +142,54 @@ input {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -20;
+  z-index: -1;
   width: 100%;
   height: 100%;
   opacity: 45%;
+}
+
+footer {
+  position: absolute;
+  bottom: 2%;
+  right: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .footer-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .footer-logo p {
+  margin: 0;
+}
+
+footer p {
+  margin: 1.5em 0.3em;
+  font-weight: 600;
+  color: crimson;
+}
+
+footer span {
+  font-weight: 700;
+  color: black;
+}
+
+footer img {
+  width: 3em;
+  height: 3em;
+}
+
+footer a {
+  margin: 0.2em;
 }
 /*# sourceMappingURL=app.css.map */
