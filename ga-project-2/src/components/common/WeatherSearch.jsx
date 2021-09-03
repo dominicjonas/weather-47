@@ -36,6 +36,7 @@ const WeatherSearch = () => {
       .then((weather) => {
         setWeatherInfo(weather)
         setLocationInput('')
+        console.log({ weather })
       })
   }, [locationQuery])
 
@@ -60,7 +61,13 @@ const WeatherSearch = () => {
         />
       </form>
       {weatherInfo && cityInfo && (
-        <div className='weather-container'>
+        <div
+          className={
+            weatherInfo.IsDayTime
+              ? 'weather-container day-container'
+              : 'weather-container night-container'
+          }
+        >
           <>
             <TemperatureField temperature={weatherInfo.Temperature.Metric.Value} />
             <NameField
@@ -70,16 +77,11 @@ const WeatherSearch = () => {
             <WeatherConditionField weatherCondition={weatherInfo.WeatherText} />
             <TimeField GMTOffset={cityInfo.TimeZone.GmtOffset} cityName={locationQuery} />
             <DateField date={weatherInfo.LocalObservationDateTime} />
-            {weatherInfo.IsDayTime ? (
-              <div>isDayTime : true</div>
-            ) : (
-              <div>isDayTime: false</div>
-            )}
             <WeatherIconField weatherIcon={weatherInfo.WeatherIcon} />
           </>
         </div>
       )}
-      <div>
+      <div className='pexels-img'>
         <img src={photoUrl} alt='' />
       </div>
     </>
@@ -113,3 +115,12 @@ export default WeatherSearch
 // this is fed into the getCity function to retrieve a unique city key
 // that key is fed into the getWeather function as an id , which return the weather data
 // all this is run inside the useEffect which fires when the locationQuery state is populated
+
+// TODO 3
+//? weather card styling -> glassmorphism?
+//? weathericon styling
+//? use IsDayTime to alter background state
+//? Timefield -> moment.js
+//? pexels api image styling
+//? form input styling
+//? responsive

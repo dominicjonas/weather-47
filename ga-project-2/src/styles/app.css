@@ -103,4 +103,31 @@ input {
   font-size: 1.3em;
   font-weight: 600;
 }
+
+.weather-container .weather-icon img {
+  fill: white;
+  font-size: 4em;
+  height: 4em;
+  color: white;
+  fill: white;
+}
+
+.pexels-img {
+  border: 4px solid black;
+}
+
+.night-container {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(100, 73, 73, 0.5)), to(rgba(255, 255, 255, 0.5))), url(../assets/images/nightsky.jpg);
+  background: linear-gradient(rgba(100, 73, 73, 0.5), rgba(255, 255, 255, 0.5)), url(../assets/images/nightsky.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.day-container {
+  background: lightblue;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(100, 73, 73, 0.5)), to(rgba(255, 255, 255, 0.1))), url(../assets/images/daysky.jpg);
+  background: linear-gradient(rgba(100, 73, 73, 0.5), rgba(255, 255, 255, 0.1)), url(../assets/images/daysky.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 /*# sourceMappingURL=app.css.map */
