@@ -12,4 +12,7 @@ Create an app using React that takes 2 APIs and dynamically displays weather inf
     - This is needed if the current key has expired (after 50 calls). 
     - 'lib' folder
      - 'accuWeatherApi.js' --> key  
+- yarn start / npm start to run the app in your browser.
+
+
 
