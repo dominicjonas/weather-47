@@ -24,10 +24,9 @@ body {
   .title {
     color: crimson;
     margin-top: 1em;
-    font-size: 5em;
+    font-size: calc(2vw + 2vh + 2vmin);
     letter-spacing: -8px;
     font-weight: 900;
-
     span {
       color: var(--light-theme-span);
       font-size: 1.3em;
@@ -64,19 +63,20 @@ body {
       position: absolute;
       bottom: 0;
       left: 0;
-      width: 100%;
+      width: 360px;
       height: 100%;
       pointer-events: none;
-      border-bottom: 1px solid black;
+      border-bottom: 2px solid black;
       font-weight: 600;
       font-size: 1.3em;
       color: #222;
+      margin-bottom: 0.2em;
       &::after {
         content: '';
         position: absolute;
         width: 100%;
         height: 100%;
-        border-bottom: 3px solid rgb(128, 168, 167);
+        border-bottom: 3px solid crimson;
         left: 0;
         bottom: -2px;
         transform: translateX(-100%);
@@ -99,10 +99,9 @@ body {
 //* Weather Card UI
 
 .weather-container {
-  width: 400px;
-  height: 650px;
+  width: 360px;
+  height: 480px;
   position: relative;
-  margin-bottom: 0em;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -113,11 +112,11 @@ body {
   color: white;
   p {
     padding: 0.1em;
-    margin: 0.5em;
+    margin: 0.5em 0;
   }
   .temp-display {
     background: transparent;
-    font-size: 4em;
+    font-size: 3em;
     font-weight: 700;
     color: aliceblue;
     span {
@@ -125,7 +124,7 @@ body {
     }
   }
   .city-name-display {
-    font-size: 1.8em;
+    font-size: 1.3em;
     font-weight: 600;
   }
   .weather-condition-display {
@@ -137,8 +136,8 @@ body {
     font-weight: 600;
   }
   .weather-icon img {
-    height: 5em;
-    font-size: 3.5em;
+    height: 3em;
+    font-size: 4em;
   }
   .hr {
     border: 1px solid aliceblue;
@@ -148,7 +147,10 @@ body {
 }
 
 .night-container {
-  background: linear-gradient(rgba(100, 73, 73, 0.5), rgba(255, 255, 255, 0.5)),
+  background: linear-gradient(
+      rgba(100, 73, 73, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
     url(../assets/images/nightsky.jpeg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -156,7 +158,10 @@ body {
 
 .day-container {
   background: lightblue;
-  background: linear-gradient(rgba(100, 73, 73, 0.5), rgba(255, 255, 255, 0.1)),
+  background: linear-gradient(
+      rgba(100, 73, 73, 0.5),
+      rgba(255, 255, 255, 0.1)
+    ),
     url(../assets/images/daysky.jpeg);
   background-size: cover;
   background-repeat: no-repeat;

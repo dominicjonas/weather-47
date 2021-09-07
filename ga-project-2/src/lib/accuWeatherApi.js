@@ -1,4 +1,4 @@
-const key = 'OHVB1LsxAj5At4dR1weR3s0LdgVmAyPB'
+const key = 'uBnG07108o02cIlG3IGPOGyNLzcbtrWt'
 
 export const getWeather = async (id) => {
   const base = 'http://dataservice.accuweather.com/currentconditions/v1/'
@@ -20,4 +20,3 @@ export const getCity = async (city) => {
 
   return data[0]
 }
-//

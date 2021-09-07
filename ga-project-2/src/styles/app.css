@@ -31,7 +31,7 @@ body {
 body .title {
   color: crimson;
   margin-top: 1em;
-  font-size: 5em;
+  font-size: calc(2vw + 2vh + 2vmin);
   letter-spacing: -8px;
   font-weight: 900;
 }
@@ -77,13 +77,14 @@ body .form label {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 100%;
+  width: 360px;
   height: 100%;
   pointer-events: none;
-  border-bottom: 1px solid black;
+  border-bottom: 2px solid black;
   font-weight: 600;
   font-size: 1.3em;
   color: #222;
+  margin-bottom: 0.2em;
 }
 
 body .form label::after {
@@ -91,7 +92,7 @@ body .form label::after {
   position: absolute;
   width: 100%;
   height: 100%;
-  border-bottom: 3px solid #80a8a7;
+  border-bottom: 3px solid crimson;
   left: 0;
   bottom: -2px;
   -webkit-transform: translateX(-100%);
@@ -116,10 +117,9 @@ body .form .content-name {
 }
 
 .weather-container {
-  width: 400px;
-  height: 650px;
+  width: 360px;
+  height: 480px;
   position: relative;
-  margin-bottom: 0em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -142,12 +142,12 @@ body .form .content-name {
 
 .weather-container p {
   padding: 0.1em;
-  margin: 0.5em;
+  margin: 0.5em 0;
 }
 
 .weather-container .temp-display {
   background: transparent;
-  font-size: 4em;
+  font-size: 3em;
   font-weight: 700;
   color: aliceblue;
 }
@@ -157,7 +157,7 @@ body .form .content-name {
 }
 
 .weather-container .city-name-display {
-  font-size: 1.8em;
+  font-size: 1.3em;
   font-weight: 600;
 }
 
@@ -172,8 +172,8 @@ body .form .content-name {
 }
 
 .weather-container .weather-icon img {
-  height: 5em;
-  font-size: 3.5em;
+  height: 3em;
+  font-size: 4em;
 }
 
 .weather-container .hr {
