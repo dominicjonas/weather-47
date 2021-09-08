@@ -21,8 +21,9 @@ Create an app using React that takes 2 APIs and dynamically displays weather inf
 
 ## APIs used
 
-AccuWeather - https://developer.accuweather.com/?gclid=CjwKCAjwvuGJBhB1EiwACU1Aibm6DSrKPpmw1heAuA-sD0-umT1WPeeDO5h8X0wgNX5IyYW_MmJSQhoCy5sQAvD_BwE
-Pexels - https://www.pexels.com/api/
+  - AccuWeather - https://developer.accuweather.com/?gclid=CjwKCAjwvuGJBhB1EiwACU1Aibm6DSrKPpmw1heAuA-sD0-umT1WPeeDO5h8X0wgNX5IyYW_MmJSQhoCy5sQAvD_BwE
+  
+  - Pexels - https://www.pexels.com/api/
 
 
 ![Screenshot 2021-09-08 at 15 45 58](https://user-images.githubusercontent.com/83312425/132531721-3d9d41dc-d490-4d52-ba3f-61553dd7f554.png)
