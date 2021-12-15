@@ -1,6 +1,6 @@
 # sei-ga-project-2
 
-## Live site: https://summit-exercise-dashboard.netlify.app
+## Live site: https://weather-47.netlify.app/
 
 ## Project Brief 
 Create an app using React that takes 2 APIs and dynamically displays weather information and background pictures based on user input.
@@ -48,7 +48,7 @@ I used Figma for brainstorming, user story design, feature planning and UI conce
 - Squeeze every last FPS from the code. 
 
 ### Minify
-- Condense this project into a widget that can be used with a dashboard in a future project.
+- Condense this project into a widget that can be used within a dashboard in a future project.
 
 ![Screenshot 2021-09-08 at 15 45 58](https://user-images.githubusercontent.com/83312425/132531721-3d9d41dc-d490-4d52-ba3f-61553dd7f554.png)
 
