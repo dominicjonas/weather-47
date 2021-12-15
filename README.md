@@ -36,6 +36,7 @@ I used Figma for brainstorming, user story design, feature planning and UI conce
 ## Issues
 - This was my first experience with manipulating data sent and fetched from an API. This was a challenge at first but after careful reading of the relevant documentation I had the app communicating as intended.
 - There was an issue with the very short use of the AccuWeather api token which expires and causes http errors.
+- Finding the right weather icons to fit with the UI was a challenge and went through several iterations before landing on what I think are the highest quality SVGs I could find. 
 
 ## Wins
 - Gained valuable experience with API workflow.
