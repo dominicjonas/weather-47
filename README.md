@@ -51,7 +51,13 @@ I used Figma for brainstorming, user story design, feature planning and UI conce
 ### Minify
 - Condense this project into a widget that can be used within a dashboard in a future project.
 
+## Screenshots
+
+### Landing page / Search UI
+
 ![Screenshot 2021-09-08 at 15 45 58](https://user-images.githubusercontent.com/83312425/132531721-3d9d41dc-d490-4d52-ba3f-61553dd7f554.png)
+
+### Search results card and dynamic background
 
 ![Screenshot 2021-09-08 at 15 46 28](https://user-images.githubusercontent.com/83312425/132531826-4f2454bd-871b-4ff7-8071-7baa7a666ec8.png)
 
